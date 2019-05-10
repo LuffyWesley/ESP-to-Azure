@@ -86,7 +86,7 @@ You can use the application to simulate temperature & humidity data and send to 
 5. Click on `Explorer`
 6. At the bottom right, click on `Azure IoT Hub Devices`
 
-![](images/vs-code.png)
+![](images/vs-code1.png)
 
 7. Right-click your device and select `Start Monitoring D2C Message`
 8. The monitored messages will be shown in `OUTPUT > Azure IoT Hub Toolkit view`
