@@ -29,9 +29,10 @@ Section describes how to create an IoT hub using the [Azure Portal](https://port
 
 ![](images/device-add.png)
 2. Name the device in the `Device ID` field
-3. Click `Save`
 
 ![](images/device-name.png)
+
+3. Click `Save`
 
 ## Install board with your Arduino IDE 
 1. Start Arduino and open Preferences window.
@@ -92,4 +93,4 @@ You can use the application to simulate temperature & humidity data and send to 
 8. The monitored messages will be shown in `OUTPUT > Azure IoT Hub Toolkit view`
 9. To stop monitoring, right-click the `OUTPUT` view and select `Stop Monitoring D2C Message`
 
-# You did it!!
+# You did it!!!
