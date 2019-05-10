@@ -1,8 +1,3 @@
-// Copyright (c) Microsoft. All rights reserved.
-// Licensed under the MIT license. See LICENSE file in the project root for full license information.
-
-// Please use an Arduino IDE 1.6.8 or greater
-
 #include <ESP8266WiFi.h>
 #include <WiFiClientSecure.h>
 #include <WiFiUdp.h>
@@ -78,12 +73,6 @@ void setup()
     initTime();
     initSensor();
 
-    /*
-     * AzureIotHub library remove AzureIoTHubClient class in 1.0.34, so we remove the code below to avoid
-     *    compile error
-    */
-
-    // initIoThubClient();
     iotHubClientHandle = IoTHubClient_LL_CreateFromConnectionString(CONNECTION_STRING, MQTT_Protocol);
     if (iotHubClientHandle == NULL)
     {
