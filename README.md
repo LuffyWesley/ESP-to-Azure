@@ -1,7 +1,5 @@
 # IoT Hub Feather HUZZAH Client application 
 
-> This repo contains the source code to help you get familiar with Azure IoT using the Azure IoT Adafruit Feather HUZZAH ESP8266 Starter Kit. You will find the [lesson-based tutorials on Azure.com](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-huzzah-esp8266-get-started) and [here](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-vscode-iot-toolkit-cloud-device-messaging). 
-
 This repo contains an arduino application that runs on board feather HUZZAH ESP8266 with a DHT22 temperature & humidity sensor, and then sends these data to your IoT hub. 
 
 ### Terminology
@@ -94,3 +92,5 @@ You can use the application to simulate temperature & humidity data and send to 
 9. To stop monitoring, right-click the `OUTPUT` view and select `Stop Monitoring D2C Message`
 
 # You did it!!!
+
+> Useful tutorials used but incorrect or unnecessary steps are included. [Getting started](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-huzzah-esp8266-get-started) and [VS Code IoT Toolkit](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-vscode-iot-toolkit-cloud-device-messaging). 

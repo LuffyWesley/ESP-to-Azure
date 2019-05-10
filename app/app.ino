@@ -1,3 +1,9 @@
+// This is the main file for the program. The code below does the following:
+// 1. Connects to wifi
+// 2. Retrieves current time
+// 3. Setup connect to IoT hub 
+// 4. Sends message to IoT hub
+
 #include <ESP8266WiFi.h>
 #include <WiFiClientSecure.h>
 #include <WiFiUdp.h>

@@ -1,3 +1,8 @@
+// The code below does the following:
+// 1. Create simulated data if you don't have the DHT sensor
+// 2. Gathers temperature and humidity reading from DHT sensor
+// 3. Sends data to IoT hub and reads data for conditional statement
+
 #include <Adafruit_Sensor.h>
 #include <ArduinoJson.h>
 #include <DHT.h>
