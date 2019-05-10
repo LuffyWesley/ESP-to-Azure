@@ -18,15 +18,19 @@ This repo contains an arduino application that runs on board feather HUZZAH ESP8
 ## Create your Azure IoT hub
 Section describes how to create an IoT hub using the [Azure Portal](https://portal.azure.com/)
 1. Choose `+Create a resource`, then click on `Internet of Things`. Select `IoT Hub`
+
 ![](images/create-basics.png)
+
 ![](images/create-size.png)
 2. Click on `Review + create` then click on `Create` to create your new IoT hub. Creating the hub takes a few minutes
 
 ## Register a new device in the IoT hub
 1. In the IoT hub navigation menu, click on `IoT devies` then click on `Add` to register a new device
+
 ![](images/device-add.png)
 2. Name the device in the `Device ID` field
 3. Click `Save`
+
 ![](images/device-name.png)
 
 ## Install board with your Arduino IDE 
@@ -63,7 +67,9 @@ You can use the application to simulate temperature & humidity data and send to 
 2. Edit `WIFI_SSID`
 3. Edit `WIFI_PASS`
 4. Back at the Azure Portal, click on `IoT devices` then the new device created. Copy the `connection string (primary key)` and proceed to step 5
+
 ![](images/device-key.png)
+
 5. Edit `CONNECTION_STRING`
 
 ## Configure and run sample application
@@ -79,7 +85,9 @@ You can use the application to simulate temperature & humidity data and send to 
 4. Search for and install `Azure IoT Tools`
 5. Click on `Explorer`
 6. At the bottom right, click on `Azure IoT Hub Devices`
+
 ![](images/vs-code.png)
+
 7. Right-click your device and select `Start Monitoring D2C Message`
 8. The monitored messages will be shown in `OUTPUT > Azure IoT Hub Toolkit view`
 9. To stop monitoring, right-click the `OUTPUT` view and select `Stop Monitoring D2C Message`
