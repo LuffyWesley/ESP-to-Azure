@@ -21,4 +21,4 @@
 #define WIFI_PASS ""
 
 // Copy and paste conection string (primary key)
-#define CONNECTION_STRING "HostName=DHT-Test.azure-devices.net;DeviceId=DHT-Sensor;SharedAccessKey=C9f4a7+FnNHsDd0mLPE3dltb7jkJTPgF+cE5+JkUXnw="
+#define CONNECTION_STRING ""
