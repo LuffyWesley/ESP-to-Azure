@@ -15,7 +15,7 @@ This repo contains an arduino application that runs on board feather HUZZAH ESP8
 
 ## Create your Azure IoT hub
 Section describes how to create an IoT hub using the [Azure Portal](https://portal.azure.com/)
-1. Choose `+Create a resource`, then click on `Internet of Things`. Select `IoT Hub`
+1. Choose `+ Create a resource`, then click on `Internet of Things`. Select `IoT Hub`
 
 ![](images/create-basics.png)
 

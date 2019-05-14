@@ -13,7 +13,7 @@
 
 // If don't have a physical DHT sensor, can send simulated data to IoT hub 
 // False to use sensor, true to use simulated data 
-#define SIMULATED_DATA false
+#define SIMULATED_DATA true
 
 #define MESSAGE_MAX_LEN 256
 

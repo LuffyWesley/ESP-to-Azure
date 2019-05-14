@@ -19,22 +19,19 @@ static bool messageSending = true;
 
 static int interval = INTERVAL;
 
-void blinkLED()
-{
+void blinkLED() {
     digitalWrite(LED_PIN, HIGH);
     delay(500);
     digitalWrite(LED_PIN, LOW);
 }
 
-void initWifi()
-{
+void initWifi() {
     // Attempt to connect to Wifi network:
     Serial.printf("Attempting to connect to WIFI_SSID : %s.\r\n", WIFI_SSID );
 
     // Connect to WPA/WPA2 network. Change this line if using open or WEP network:
     WiFi.begin(WIFI_SSID , WIFI_PASS );
-    while (WiFi.status() != WL_CONNECTED)
-    {
+    while (WiFi.status() != WL_CONNECTED) {
         // Get Mac Address and show it.
         // WiFi.macAddress(mac) save the mac address into a six length array, but the endian may be different. The huzzah board should
         // start from mac[0] to mac[5], but some other kinds of board run in the oppsite direction.
@@ -48,22 +45,17 @@ void initWifi()
     Serial.printf("Connected to wifi %s.\r\n", WIFI_SSID );
 }
 
-void initTime()
-{
+void initTime() {
     time_t epochTime;
     configTime(0, 0, "pool.ntp.org", "time.nist.gov");
 
-    while (true)
-    {
+    while (true) {
         epochTime = time(NULL);
 
-        if (epochTime == 0)
-        {
+        if (epochTime == 0) {
             Serial.println("Fetching NTP epoch time failed! Waiting 2 seconds to retry.");
             delay(2000);
-        }
-        else
-        {
+        } else {
             Serial.printf("Fetched NTP epoch time is: %lu.\r\n", epochTime);
             break;
         }
@@ -71,8 +63,7 @@ void initTime()
 }
 
 static IOTHUB_CLIENT_LL_HANDLE iotHubClientHandle;
-void setup()
-{
+void setup() {
     pinMode(LED_PIN, OUTPUT);
 
     initWifi();
@@ -80,8 +71,7 @@ void setup()
     initSensor();
 
     iotHubClientHandle = IoTHubClient_LL_CreateFromConnectionString(CONNECTION_STRING, MQTT_Protocol);
-    if (iotHubClientHandle == NULL)
-    {
+    if (iotHubClientHandle == NULL) {
         Serial.println("Failed on IoTHubClient_CreateFromConnectionString.");
         while (1);
     }
@@ -93,10 +83,8 @@ void setup()
 }
 
 static int messageCount = 1;
-void loop()
-{
-    if (!messagePending && messageSending)
-    {
+void loop() {
+    if (!messagePending && messageSending) {
         char messagePayload[MESSAGE_MAX_LEN];
         bool temperatureAlert = readMessage(messageCount, messagePayload);
         sendMessage(iotHubClientHandle, messagePayload, temperatureAlert);
